@@ -7,6 +7,7 @@ Affected games this script fixes include:
  - Dead Cells
  - Dirt Rally
  - Civilization VI
+ - The Count Lucanor
 
 # Install
 
