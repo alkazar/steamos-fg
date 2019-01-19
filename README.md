@@ -8,6 +8,7 @@ Affected games this script fixes include:
  - Dirt Rally
  - Civilization VI
  - The Count Lucanor
+ - Mad Max
 
 # Install
 
