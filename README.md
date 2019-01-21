@@ -22,5 +22,8 @@ Add `steamos-fg %command%` to the launch options for each game you wish to use t
 
 # Notes
 
-I have only tested this on Arch Linux running the SteamOS compositor.
-On Arch Linux, you will need the `xorg-xwininfo` and `xorg-xprop` packages.
+This script was tested on Arch and reported to work on Ubuntu and SteamOS.
+
+On Arch, you will need the `xorg-xwininfo` and `xorg-xprop` packages.
+
+On Ubuntu, you will need the `x11-utils` package.
