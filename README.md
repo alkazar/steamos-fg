@@ -9,6 +9,7 @@ Affected games this script fixes include:
  - Civilization VI
  - The Count Lucanor
  - Mad Max
+ - Mirror's Edge (Steam Play)
 
 # Install
 
