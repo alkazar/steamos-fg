@@ -58,5 +58,5 @@ PID_FOREGROUND_JOB=$!
 
 # wait for game exit
 wait ${PID_GAME}
-# stop resizer if it still is running
+# stop foreground_job if it still is running
 kill ${PID_FOREGROUND_JOB} || true

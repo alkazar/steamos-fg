@@ -68,7 +68,7 @@ This script was tested on Arch and Ubuntu and has been reported to work on Steam
 
 ### Arch
 
-On Arch, you will need these packages.
+On Arch, you will need these packages:
 
 - `xorg-xwininfo`
 - `xorg-xprop`
@@ -78,7 +78,7 @@ On Arch, you will need these packages.
 
 ### Ubuntu
 
-On Ubuntu, you will need these packages.
+On Ubuntu, you will need these packages:
 
 - `x11-utils`
 - `xdotool`
