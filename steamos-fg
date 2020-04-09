@@ -32,7 +32,7 @@ handle_child_processes() {
     done
 }
 
-handle_non_steam_windows () {
+handle_non_steam_windows() {
     # find window with size greater than 99x99 that is not a steam window
     RESULT=$(xwininfo -display ":0" -root -tree | grep -E "[0-9]{3}x[0-9]{3}" | grep -v \"Steam\"\: | grep -v \"SteamOverlay\"\:) || true
     WINDOW_IDS=$(echo "$RESULT" | awk '{print $1}') || true
@@ -41,7 +41,7 @@ handle_non_steam_windows () {
     done
 }
 
-maintain_foreground() {
+foreground_job() {
     for _ in {1..30}; do
         sleep 1
         handle_child_processes "${PID_GAME}"
@@ -53,10 +53,10 @@ maintain_foreground() {
 exec "$@" > /dev/null &
 PID_GAME=$!
 
-maintain_foreground &
-PID_RESIZER=$!
+foreground_job &
+PID_FOREGROUND_JOB=$!
 
 # wait for game exit
 wait ${PID_GAME}
 # stop resizer if it still is running
-kill ${PID_RESIZER} || true
+kill ${PID_FOREGROUND_JOB} || true
