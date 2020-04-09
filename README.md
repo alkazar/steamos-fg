@@ -84,3 +84,9 @@ On Ubuntu, you will need these packages:
 - `xdotool`
 - `procps`
 - `gawk`
+
+## Alternatives
+
+Instead of this hack, you could fix the problems where they stem from, the `steamos-compositor`.
+
+Have a look at [steamos-compositor-plus](https://github.com/gamer-os/steamos-compositor-plus), which is part of SteamOS alternative [GamerOS](https://gamer-os.github.io/).
