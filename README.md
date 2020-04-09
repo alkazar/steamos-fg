@@ -64,6 +64,23 @@ Exec=/usr/local/bin/gameros-fg /usr/bin/flatpak run --branch=stable --arch=x86_6
 
 This script was tested on Arch and Ubuntu and has been reported to work on SteamOS.
 
-On Arch, you will need the `xorg-xwininfo`, `xorg-xprop`, `procps-ng` and `xdotool` packages.
+## Package dependencies
 
-On Ubuntu, you will need the `x11-utils`, `procps` and `xdotool` packages.
+### Arch
+
+On Arch, you will need these packages.
+
+- `xorg-xwininfo`
+- `xorg-xprop`
+- `xdotool`
+- `procps-ng`
+- `gawk`
+
+### Ubuntu
+
+On Ubuntu, you will need these packages.
+
+- `x11-utils`
+- `xdotool`
+- `procps`
+- `gawk`
