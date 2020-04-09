@@ -17,14 +17,14 @@ apply_steamgame_property() {
         for ID in ${WINDOW_ID}; do
             echo "Handling window with ID $ID"
             # apply STEAM_GAME property to game window so steamos compositor shows game in foreground
-            xprop -display ":0" -id "${ID}" -f STEAM_GAME 32c -set STEAM_GAME 470470 || true
+            xprop -display ${DISPLAY} -id "${ID}" -f STEAM_GAME 32c -set STEAM_GAME 470470 || true
         done
     fi
 }
 
 handle_child_processes() {
     PID=$1
-    WINDOW_ID=$(DISPLAY=:0 xdotool search --pid "${PID}") || true
+    WINDOW_ID=$(xdotool search --pid "${PID}") || true
     apply_steamgame_property "${WINDOW_ID}"
     CHILD_PIDS=$(pgrep -P "${PID}") || true
     for PID in $CHILD_PIDS; do
@@ -34,7 +34,7 @@ handle_child_processes() {
 
 handle_non_steam_windows() {
     # find window with size greater than 99x99 that is not a steam window
-    RESULT=$(xwininfo -display ":0" -root -tree | grep -E "[0-9]{3}x[0-9]{3}" | grep -v \"Steam\"\: | grep -v \"SteamOverlay\"\:) || true
+    RESULT=$(xwininfo -display ${DISPLAY} -root -tree | grep -E "[0-9]{3}x[0-9]{3}" | grep -v \"Steam\"\: | grep -v \"SteamOverlay\"\:) || true
     WINDOW_IDS=$(echo "$RESULT" | awk '{print $1}') || true
     for ID in $WINDOW_IDS; do
         apply_steamgame_property "${ID}"
