@@ -1,3 +1,7 @@
+THIS PROJECT IS NO LONGER ACTIVELY MAINTAINED, PLEASE SEE THIS FORK:
+https://github.com/oolongbrothers/steamos-fg
+
+
 # What is this for?
 
 When using the SteamOS compositor, some games start behind the big picture UI and no graphics are displayed. This script forces such games to be shown in the foreground.
